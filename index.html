@@ -10,13 +10,16 @@
 <body>
     <h1>Movie Rating App</h1>
 
+    <!-- Tabs -->
     <div class="tabs">
         <button class="tab-btn active" data-tab="add">Aggiungi Film</button>
         <button class="tab-btn" data-tab="rank">Classifica</button>
     </div>
 
-    <div class="tab-content" id="add">
+    <!-- Aggiungi Film -->
+    <div class="tab-content" id="add" style="display:block;">
         <label><input type="checkbox" id="is_animation"> Animazione</label>
+
         <div>
             <label>Titolo del Film:</label>
             <input type="text" id="title" placeholder="Titolo">
@@ -35,6 +38,7 @@
         <button id="addMovieBtn">Aggiungi Film</button>
     </div>
 
+    <!-- Classifica -->
     <div class="tab-content" id="rank" style="display:none;">
         <table>
             <thead>
@@ -45,12 +49,12 @@
                 </tr>
             </thead>
             <tbody id="rankingBody">
-                <!-- Film inseriti qui -->
+                <!-- Film inseriti qui dinamicamente -->
             </tbody>
         </table>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Script -->
+    <script src="script.js" defer></script>
 </body>
 </html>
-
