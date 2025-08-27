@@ -1,4 +1,4 @@
-let movies = JSON.parse(localStorage.getItem("movies") || "[let movies = [
+[let movies = [
   {"Title":"Oppenheimer","Acting":9.5,"Pacing":7.5,"Cinematography":9.5,"Scrittura":9.0,"Plot":9.0,"Personaggi":9.5,"Finale":10.0,"Overall":9.12},
   {"Title":"Sixteen candels","Acting":5.5,"Pacing":5.0,"Cinematography":5.0,"Scrittura":4.5,"Plot":4.0,"Personaggi":5.0,"Finale":6.0,"Overall":5.03},
   {"Title":"Don’t worry darling","Acting":7.0,"Pacing":7.0,"Cinematography":8.0,"Scrittura":6.0,"Plot":7.5,"Personaggi":6.5,"Finale":7.5,"Overall":7.05},
