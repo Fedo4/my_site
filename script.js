@@ -1,4 +1,5 @@
-let movies =  JSON.parse(localStorage.getItem("movies")) || [
+// Tutti i film iniziali convertiti da TXT
+let defaultMovies = [
   {"Title":"Oppenheimer","Acting":9.5,"Pacing":7.5,"Cinematography":9.5,"Scrittura":9.0,"Plot":9.0,"Personaggi":9.5,"Finale":10.0,"Overall":9.12},
   {"Title":"Sixteen candels","Acting":5.5,"Pacing":5.0,"Cinematography":5.0,"Scrittura":4.5,"Plot":4.0,"Personaggi":5.0,"Finale":6.0,"Overall":5.03},
   {"Title":"Don’t worry darling","Acting":7.0,"Pacing":7.0,"Cinematography":8.0,"Scrittura":6.0,"Plot":7.5,"Personaggi":6.5,"Finale":7.5,"Overall":7.05},
@@ -18,10 +19,20 @@ let movies =  JSON.parse(localStorage.getItem("movies")) || [
   {"Title":"The killer","Acting":7.0,"Pacing":7.0,"Cinematography":7.5,"Scrittura":5.5,"Plot":4.0,"Personaggi":6.0,"Finale":6.0,"Overall":6.14},
   {"Title":"500 giorni insieme","Acting":8.0,"Pacing":8.0,"Cinematography":7.0,"Scrittura":8.5,"Plot":7.0,"Personaggi":8.0,"Finale":7.5,"Overall":7.72},
   {"Title":"Spider-Man across the spider verse","Pacing":8.5,"Cinematography":9.0,"Scrittura":8.5,"Plot":8.0,"Personaggi":9.0,"Finale":8.0,"Overall":8.6}
+  // Aggiungi qui tutti gli altri film dal TXT, nello stesso formato
 ];
+
+// Carica dal localStorage oppure usa defaultMovies
+let movies = JSON.parse(localStorage.getItem("movies")) || defaultMovies;
+
+// Funzione per salvare in localStorage
+function saveMovies() {
+    localStorage.setItem("movies", JSON.stringify(movies));
+}
+
+// Gestione tabs
 const tabs = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
-
 tabs.forEach(btn => {
     btn.addEventListener("click", () => {
         tabs.forEach(b => b.classList.remove("active"));
@@ -31,12 +42,14 @@ tabs.forEach(btn => {
     });
 });
 
+// Toggle Acting per animazioni
 const isAnimationCheckbox = document.getElementById("is_animation");
 const actingInput = document.getElementById("Acting");
 isAnimationCheckbox.addEventListener("change", () => {
     actingInput.disabled = isAnimationCheckbox.checked;
 });
 
+// Aggiungi film
 document.getElementById("addMovieBtn").addEventListener("click", () => {
     const title = document.getElementById("title").value.trim();
     if (!title) { alert("Inserisci un titolo!"); return; }
@@ -57,12 +70,13 @@ document.getElementById("addMovieBtn").addEventListener("click", () => {
 
     movie.Overall = parseFloat((total/count).toFixed(2));
     movies.push(movie);
-    localStorage.setItem("movies", JSON.stringify(movies));
+    saveMovies();
     alert(`Film '${title}' aggiunto!`);
     clearInputs();
     updateRanking();
 });
 
+// Pulisci input
 function clearInputs() {
     document.getElementById("title").value = "";
     ["Acting","Pacing","Cinematography","Scrittura","Plot","Personaggi","Finale"].forEach(cat => {
@@ -72,6 +86,7 @@ function clearInputs() {
     actingInput.disabled = false;
 }
 
+// Aggiorna classifica
 function updateRanking() {
     const tbody = document.getElementById("rankingBody");
     tbody.innerHTML = "";
@@ -85,5 +100,5 @@ function updateRanking() {
     });
 }
 
-// inizializza la classifica all'avvio
+// inizializza la classifica all’avvio
 updateRanking();
