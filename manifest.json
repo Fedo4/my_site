@@ -1,7 +1,7 @@
 {
   "name": "Il Mio Sito",
   "short_name": "MioSito",
-  "start_url": "/index.html",
+ "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0000ff",
