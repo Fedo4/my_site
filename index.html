@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0000ff">
-  <meta charset="UTF-8">
-  <title>Il mio sito</title>
+    <meta charset="UTF-8">
+    <title>Movie Rating App</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0000ff">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Ciao, questo è il mio sito!</h1>
+    <h1>Movie Rating App</h1>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="add">Aggiungi Film</button>
+        <button class="tab-btn" data-tab="rank">Classifica</button>
+    </div>
+
+    <div class="tab-content" id="add">
+        <label><input type="checkbox" id="is_animation"> Animazione</label>
+        <div>
+            <label>Titolo del Film:</label>
+            <input type="text" id="title" placeholder="Titolo">
+        </div>
+
+        <div class="category-inputs">
+            <div><label>Acting:</label><input type="number" min="0" max="10" id="Acting"></div>
+            <div><label>Pacing:</label><input type="number" min="0" max="10" id="Pacing"></div>
+            <div><label>Cinematography:</label><input type="number" min="0" max="10" id="Cinematography"></div>
+            <div><label>Scrittura:</label><input type="number" min="0" max="10" id="Scrittura"></div>
+            <div><label>Plot:</label><input type="number" min="0" max="10" id="Plot"></div>
+            <div><label>Personaggi:</label><input type="number" min="0" max="10" id="Personaggi"></div>
+            <div><label>Finale:</label><input type="number" min="0" max="10" id="Finale"></div>
+        </div>
+
+        <button id="addMovieBtn">Aggiungi Film</button>
+    </div>
+
+    <div class="tab-content" id="rank" style="display:none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Titolo</th>
+                    <th>Overall</th>
+                </tr>
+            </thead>
+            <tbody id="rankingBody">
+                <!-- Film inseriti qui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
