@@ -33,7 +33,7 @@ let defaultMovies = [
   {"Title":"Dream scenario","Acting":6.5,"Pacing":8.0,"Cinematography":8.0,"Scrittura":7.5,"Plot":7.0,"Personaggi":7.0,"Finale":7.5,"Overall":7.36},
   {"Title":"Società della neve","Acting":8.5,"Pacing":8.5,"Cinematography":9.0,"Scrittura":8.0,"Plot":7.5,"Personaggi":8.0,"Finale":8.5,"Overall":8.36},
   {"Title":"Una settimana da Dio","Acting":6.0,"Pacing":7.5,"Cinematography":6.0,"Scrittura":6.5,"Plot":5.0,"Personaggi":6.5,"Finale":7.0,"Overall":6.36},
-  {"Title":"Metti la nonna in freezer","Acting":7.0,"Pacing":8.0,"Cinematography":6.0,"Scrittura":7.5,"Plot":6.0,"Personaggi":7.0,"Finale":7.0,"Overall":6.9}
+  {"Title":"Metti la nonna in freezer","Acting":7.0,"Pacing":8.0,"Cinematography":6.0,"Scrittura":7.5,"Plot":6.0,"Personaggi":7.0,"Finale":7.0,"Overall":6.9},
   {"Title":"Before sunrise","Acting":7.5,"Pacing":8.0,"Cinematography":6.5,"Scrittura":8.5,"Plot":7.0,"Personaggi":8.0,"Finale":8.0,"Overall":7.64},
   {"Title":"Before sunshine","Acting":6.5,"Pacing":7.0,"Cinematography":6.0,"Scrittura":6.0,"Plot":5.0,"Personaggi":7.0,"Finale":5.5,"Overall":6.14},
   {"Title":"Zodiac","Acting":7.5,"Pacing":7.0,"Cinematography":7.0,"Scrittura":8.0,"Plot":7.5,"Personaggi":7.5,"Finale":7.5,"Overall":7.47},
