@@ -19,8 +19,6 @@ let movies = [
   {"Title":"500 giorni insieme","Acting":8.0,"Pacing":8.0,"Cinematography":7.0,"Scrittura":8.5,"Plot":7.0,"Personaggi":8.0,"Finale":7.5,"Overall":7.72},
   {"Title":"Spider-Man across the spider verse","Pacing":8.5,"Cinematography":9.0,"Scrittura":8.5,"Plot":8.0,"Personaggi":9.0,"Finale":8.0,"Overall":8.6}
 ];
-]");
-
 const tabs = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content");
 
