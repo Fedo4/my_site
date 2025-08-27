@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.category-inputs div {
+    margin: 5px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: center;
+}
+
+.top3 {
+    background-color: lightgreen;
+}
+
+.bottom3 {
+    background-color: salmon;
+}
